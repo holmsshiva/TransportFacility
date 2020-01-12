@@ -11,7 +11,7 @@ import { AuthenticationService } from './authentication.service';
 export class AppComponent {
   
   title = 'TransportFacility';
-
+  isLogin;
   constructor(public authenticationService: AuthenticationService, router: Router) {
     if (authenticationService.currentUserValue) {
       	router.navigate(['/']);
@@ -20,5 +20,14 @@ export class AppComponent {
 
   logout(){
   	this.authenticationService.logout();
+    //this.isLogin = false;
+  }
+  isLoggedIn(){
+    this.isLogin = localStorage.getItem('currentUser');
+    if(this.isLogin!=null){
+      return true;
+    }{
+      return false;
+    }
   }
 }

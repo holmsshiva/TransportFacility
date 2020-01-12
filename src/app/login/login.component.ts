@@ -17,6 +17,8 @@ export class LoginComponent implements OnInit {
 	email: string;
 	password: string;
 
+
+
 	constructor(
 		private router: Router,
 		private userService: UserService,
@@ -37,9 +39,10 @@ export class LoginComponent implements OnInit {
 
 		this.authenticationService.login(form)
 		.subscribe(res => {
-		    //let id = res['id'];
-		    //console.log(res);
-		    this.router.navigate(['/list-ride']);
+
+		    if(res.length > 0){
+		    	this.router.navigate(['/list-ride']);
+		    }	    
 		  }, (err) => {
 		    console.log(err);
 

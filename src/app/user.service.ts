@@ -19,8 +19,8 @@ export class UserService {
 	constructor(private http: HttpClient) 
 	{ }
 
-	getUsers (): Observable<User[]> {
-  		return this.http.get<User[]>(apiUrl);
+	getUsers (): Observable<User> {
+  		return this.http.get<User>(apiUrl);
 	}
 
   	register (user): Observable<User> {
@@ -28,10 +28,10 @@ export class UserService {
 		return this.http.post<User>(apiUrl, user);
 	}
 
-	login (user): Observable<User> {
+	/*login (user): Observable<User> {
 
 		return this.http.post<User>(apiUrl, user);
-	}
+	}*/
 
 
 

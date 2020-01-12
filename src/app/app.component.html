@@ -1,8 +1,9 @@
 <nav class="navbar sticky-top navbar-light bg-light">
   <a class="navbar-brand" href="/">Transport Facility</a>
   	<div class="nav navbar-right">
-      	<a *ngIf="!authenticationService.currentUserValue" routerLink="/login"> Login </a>
-    	<a *ngIf="authenticationService.currentUserValue" routerLink="/list-ride" (click) = "logout()"> Logout</a>
+      	<a *ngIf="!isLoggedIn()" routerLink="/login"class="ml-4"> Login </a>
+      	<a *ngIf="!isLoggedIn()" routerLink="/register" class="ml-4">Register</a>
+    	<a *ngIf="isLoggedIn()" routerLink="/list-ride" (click) = "logout()"> Logout</a>
     </div>
 </nav>
 <div class="container">

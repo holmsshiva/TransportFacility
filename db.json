@@ -40,12 +40,27 @@
         },
         {
           "EmployeeID": null,
-          "pickupTime": null,
-          "pickupLocation": null,
-          "destination": null
+          "pickupTime": "12:00",
+          "pickupLocation": "Silkboard",
+          "destination": "HSR"
         }
       ],
       "id": 1
+    },
+    {
+      "vType": "Car",
+      "vNumber": "Ka-3244",
+      "totalSeat": 4,
+      "availableSeat": 4,
+      "bookings": [
+        {
+          "EmployeeID": 10,
+          "pickupTime": "12:00",
+          "pickupLocation": "airport",
+          "destination": "hsr"
+        }
+      ],
+      "id": 2
     }
   ]
 }

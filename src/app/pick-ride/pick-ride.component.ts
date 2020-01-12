@@ -30,6 +30,7 @@ export class PickRideComponent implements OnInit {
 	}]
 	prevBookings = [];
 	prevRide;
+	totalSeatCount;
 
 	constructor(
 		private router: Router,
@@ -82,6 +83,7 @@ export class PickRideComponent implements OnInit {
 		this.rideService.getRide(id).subscribe(data => {
 			this.id = data.id;
 			this.prevRide = data;
+			this.totalSeatCount = data.totalSeat;
 			this.prevBookings = data.bookings;
 			this.updateForm.patchValue({
 				"vType" : data.vType,
@@ -89,7 +91,7 @@ export class PickRideComponent implements OnInit {
 				"totalSeat" : data.totalSeat,
 				'availableSeat' : data.availableSeat
 			});
-			//console.log("what is here"+data.bookings);
+			console.log(this.totalSeatCount+"what is here"+this.prevBookings.length);
 			//console.log(data.bookings);
 			this.updateForm.setControl("bookings",this.setPrevBooking(data.bookings))
 		});
