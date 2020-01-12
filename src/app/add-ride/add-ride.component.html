@@ -1,0 +1,85 @@
+<form class="form-horizontal col-12 mt-4" [formGroup]="addRideForm" (ngSubmit)="onFormSubmit(addRideForm.value)">
+  <fieldset>
+    <div class="form-row mt-4">
+
+      <label class="offset-md-2 col-md-2 col-form-label"  for="vType">Vehicle Type</label>
+      <div class="col-md-7">
+        <input type="text" id="vType" formControlName="vType" placeholder="Enter the Vichicle Type" class="form-control" list="vehicleList">
+        <!-- <span *ngIf="!addRideForm.get('vType').valid && addRideForm.get('vType').touched" class="alert-danger">Please enter the Vehicle Type</span>-->
+        <datalist id="vehicleList">
+		    <option value="Car">
+		    <option value="Bike">
+		</datalist>
+      </div>
+    </div>
+
+    <div class="form-row mt-4">
+
+      <label class="offset-md-2 col-md-2 col-form-label"  for="vNumber">Vehicle Number</label>
+      <div class="col-md-7">
+        <input type="text" id="vNumber" formControlName="vNumber" placeholder="Enter the Vichicle Number" class="form-control text-uppercase">
+        <!-- <span *ngIf="!addRideForm.get('vNumber').valid && addRideForm.get('vNumber').touched" class="alert-danger">Please enter the Vehicle Number</span>-->
+      </div>
+    </div>
+ 
+    <div class="form-row mt-4">
+
+      <label class="offset-md-2 col-md-2 col-form-label" for="totalSeat">Total Seat</label>
+      <div class="col-md-7">
+        <input type="number" id="totalSeat" formControlName="totalSeat" placeholder="Enter the total number of seat" class="form-control" list="vehicleSeats">
+        <!-- <span *ngIf="!addRideForm.get('totalSeat').valid && addRideForm.get('totalSeat').touched" class="alert-danger">Please enter the Total Seat</span>-->
+        <datalist id="vehicleSeats">
+  		    <option value="1">
+  		    <option value="2">
+  		    <option value="3">
+  		    <option value="4">
+  		    <option value="5">
+  		    <option value="6">
+  		  </datalist>
+      </div>
+    </div>
+    <div class="form-row mt-4">
+
+      <label class="offset-md-2 col-md-2 col-form-label" for="availableSeat">Available Seat</label>
+      <div class="col-md-7">
+        <input type="number" id="availableSeat" formControlName="availableSeat" placeholder="Enter the total number of seat" class="form-control">
+        <!-- <span *ngIf="!addRideForm.get('availableSeat').valid && addRideForm.get('availableSeat').touched" class="alert-danger">Available Seat</span>-->
+      </div>
+    </div>
+    <div formArrayName="bookings">
+      <div [formGroupName] = "0">
+          <div class="form-row mt-4">
+
+            <label class="offset-md-2 col-md-2 col-form-label" for="pickupTime">PickUp Time</label>
+            <div class="col-md-7">
+              <input type="time" id="pickupTime" formControlName="pickupTime" placeholder=" Enter the time" class="form-control">
+              <!-- <span *ngIf="!addRideForm.get('pickupTime').valid && addRideForm.get('pickupTime').touched" class="alert-danger">Please enter the PickUp Time</span>-->
+            </div>
+          </div>
+       
+          <div class="form-row mt-4">
+
+            <label class="offset-md-2 col-md-2 col-form-label" for="pickupLocation">PickUp Location</label>
+            <div class="col-md-7">
+              <input type="text" id="pickupLocation" formControlName="pickupLocation" placeholder="Enter the pickup Location" class="form-control">
+              <!-- <span *ngIf="!addRideForm.get('pickupLocation').valid && addRideForm.get('pickupLocation').touched" class="alert-danger">Please enter the PickUp Location</span>-->
+            </div>
+          </div>
+          <div class="form-row mt-4">
+
+            <label class="offset-md-2 col-md-2 col-form-label" for="destination">Drop Location</label>
+            <div class="col-md-7">
+              <input type="text" id="destination" formControlName="destination" placeholder="Enter the Drop Location" class="form-control">
+              <!-- <span *ngIf="!addRideForm.get('destination').valid && addRideForm.get('destination').touched" class="alert-danger">Please enter the Drop Location</span>-->
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="form-row mt-4">
+      <!-- Button -->
+      <div class="offset-md-10 col-md-2">
+        <button class="btn btn-success" type="submit" [disabled]="!addRideForm.valid">Create</button>
+      </div>
+    </div>
+  </fieldset>
+</form>

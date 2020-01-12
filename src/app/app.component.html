@@ -1,0 +1,10 @@
+<nav class="navbar sticky-top navbar-light bg-light">
+  <a class="navbar-brand" href="/">Transport Facility</a>
+  	<div class="nav navbar-right">
+      	<a *ngIf="!authenticationService.currentUserValue" routerLink="/login"> Login </a>
+    	<a *ngIf="authenticationService.currentUserValue" routerLink="/list-ride" (click) = "logout()"> Logout</a>
+    </div>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

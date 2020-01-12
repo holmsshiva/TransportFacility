@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "id": 10,
+      "firstName": "Shivaditya",
+      "lastName": "Pandey",
+      "email": "holmsshiva97@gmail.com",
+      "phone": 8840673047,
+      "password": "password"
+    },
+    {
+      "id": 11,
+      "firstName": "Shiva",
+      "lastName": "Pandey",
+      "email": "holmsshiva@gmail.com",
+      "phone": 8841234566,
+      "password": "password1"
+    },
+    {
+      "firstName": "vijay",
+      "lastName": "kumar",
+      "email": "vijay@gmail.com",
+      "phone": 8840673047,
+      "password": "1234567890",
+      "id": 12
+    }
+  ],
+  "rides": [
+    {
+      "vType": "Car",
+      "vNumber": "KA-2345",
+      "totalSeat": 4,
+      "availableSeat": 4,
+      "bookings": [
+        {
+          "EmployeeID": 10,
+          "pickupTime": "01:00",
+          "pickupLocation": "kudlu",
+          "destination": "gate"
+        },
+        {
+          "EmployeeID": null,
+          "pickupTime": null,
+          "pickupLocation": null,
+          "destination": null
+        }
+      ],
+      "id": 1
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+<form class="form-horizontal col-12 mt-4" [formGroup]="registerForm" (ngSubmit)="onFormSubmit(registerForm.value)">
+  <fieldset>
+    <div class="form-row mt-4">
+
+      <label class="offset-md-2 col-md-2 col-form-label"  for="firstName">First Name</label>
+      <div class="col-md-7">
+        <input type="text" id="firstname" formControlName="firstName" placeholder="First name" class="form-control">
+        <span *ngIf="!registerForm.get('firstName').valid && registerForm.get('firstName').touched" class="alert-danger">Please enter the First Name</span>
+      </div>
+    </div>
+
+    <div class="form-row mt-4">
+
+      <label class="offset-md-2 col-md-2 col-form-label"  for="lastName">Last Name</label>
+      <div class="col-md-7">
+        <input type="text" id="lastname" formControlName="lastName" placeholder="Last Name" class="form-control">
+        <span *ngIf="!registerForm.get('lastName').valid && registerForm.get('lastName').touched" class="alert-danger">Please enter the Last Name</span>
+      </div>
+    </div>
+ 
+    <div class="form-row mt-4">
+
+      <label class="offset-md-2 col-md-2 col-form-label" for="email">E-mail</label>
+      <div class="col-md-7">
+        <input type="email" id="email" formControlName="email" placeholder="email" class="form-control">
+        <span *ngIf="!registerForm.get('email').valid && registerForm.get('email').touched" class="alert-danger">Please enter the Email </span>
+      </div>
+    </div>
+
+    <div class="form-row mt-4">
+
+      <label class="offset-md-2 col-md-2 col-form-label" for="email">Phone Number</label>
+      <div class="col-md-7">
+        <input type="number" id="phonenumber" formControlName="phone" placeholder="Phone Number XXXXXXXXX" class="form-control">
+        <span *ngIf="!registerForm.get('phone').valid && registerForm.get('phone').touched" class="alert-danger">Please enter the Mobile Number</span>
+      </div>
+    </div>
+ 
+    <div class="form-row mt-4">
+
+      <label class="offset-md-2 col-md-2 col-form-label" for="password">Password</label>
+      <div class="col-md-7">
+        <input type="password" id="password" formControlName="password" placeholder="" class="form-control">
+        <span *ngIf="!registerForm.get('password').valid && registerForm.get('password').touched" class="alert-danger">Please enter the Password</span>
+      </div>
+    </div>
+ 
+    <div class="form-row mt-4">
+      <!-- Button -->
+      <div class="offset-md-10 col-md-2">
+        <button class="btn btn-success" type="submit" [disabled]="!registerForm.valid">Register</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
