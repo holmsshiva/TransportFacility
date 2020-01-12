@@ -40,7 +40,7 @@
 
       <label class="offset-md-2 col-md-2 col-form-label" for="password">Password</label>
       <div class="col-md-7">
-        <input type="password" id="password" formControlName="password" placeholder="" class="form-control">
+        <input type="password" id="password" formControlName="password" placeholder="password" class="form-control">
         <span *ngIf="!registerForm.get('password').valid && registerForm.get('password').touched" class="alert-danger">Please enter the Password</span>
       </div>
     </div>
@@ -48,7 +48,7 @@
     <div class="form-row mt-4">
       <!-- Button -->
       <div class="offset-md-10 col-md-2">
-        <button class="btn btn-success" type="submit" [disabled]="!registerForm.valid">Register</button>
+        <button class="btn btn-info" type="submit" [disabled]="!registerForm.valid">Register</button>
       </div>
     </div>
   </fieldset>

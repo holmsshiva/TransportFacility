@@ -1,9 +1,10 @@
+<div class="container">
 <form class="form-horizontal col-12 mt-4 mb-5" [formGroup]="updateForm" (ngSubmit)="onFormSubmit(updateForm.value)">
   <fieldset>
     <div class="form-row mt-4">
 
       <label class="offset-md-2 col-md-2 col-form-label"  for="vType">Vehicle Type</label>
-      <div class="col-md-7">
+      <div class="col-md-8">
         <input type="text" id="vType" formControlName="vType" placeholder="Enter the Vichicle Type" class="form-control" list="vehicleList">
         <!-- <span *ngIf="!updateForm.get('vType').valid && updateForm.get('vType').touched" class="alert-danger">Please enter the Vehicle Type</span>-->
         <datalist id="vehicleList">
@@ -16,7 +17,7 @@
     <div class="form-row mt-4">
 
       <label class="offset-md-2 col-md-2 col-form-label"  for="vNumber">Vehicle Number</label>
-      <div class="col-md-7">
+      <div class="col-md-8">
         <input type="text" id="vNumber" formControlName="vNumber" placeholder="Enter the Vichicle Number" class="form-control text-uppercase">
         <!-- <span *ngIf="!updateForm.get('vNumber').valid && updateForm.get('vNumber').touched" class="alert-danger">Please enter the Vehicle Number</span>-->
       </div>
@@ -25,7 +26,7 @@
     <div class="form-row mt-4">
 
       <label class="offset-md-2 col-md-2 col-form-label" for="totalSeat">Total Seat</label>
-      <div class="col-md-7">
+      <div class="col-md-8">
         <input type="number" id="totalSeat" formControlName="totalSeat" placeholder="Enter the total number of seat" class="form-control" list="vehicleSeats">
         <!-- <span *ngIf="!updateForm.get('totalSeat').valid && updateForm.get('totalSeat').touched" class="alert-danger">Please enter the Total Seat</span>-->
         <datalist id="vehicleSeats">
@@ -41,7 +42,7 @@
     <div class="form-row mt-4">
 
       <label class="offset-md-2 col-md-2 col-form-label" for="availableSeat">Available Seat</label>
-      <div class="col-md-7">
+      <div class="col-md-8">
         <input type="number" id="availableSeat" formControlName="availableSeat" placeholder="Enter the total number of seat" class="form-control">
         <!-- <span *ngIf="!updateForm.get('availableSeat').valid && updateForm.get('availableSeat').touched" class="alert-danger">Available Seat</span>-->
       </div>
@@ -54,7 +55,7 @@
         <div class="form-row mt-4">
 
           <label class="offset-md-2 col-md-2 col-form-label" for="pickupTime">PickUp Time</label>
-          <div class="col-md-7">
+          <div class="col-md-8">
             <input type="time" id="pickupTime" formControlName="pickupTime" placeholder=" Enter the time" class="form-control">
             <!-- <span *ngIf="!updateForm.get('pickupTime').valid && updateForm.get('pickupTime').touched" class="alert-danger">Please enter the PickUp Time</span>-->
           </div>
@@ -63,7 +64,7 @@
         <div class="form-row mt-4">
 
           <label class="offset-md-2 col-md-2 col-form-label" for="pickupLocation">PickUp Location</label>
-          <div class="col-md-7">
+          <div class="col-md-8">
             <input type="text" id="pickupLocation" formControlName="pickupLocation" placeholder="Enter the pickup Location" class="form-control">
             <!--<span *ngIf="!updateForm.get('pickupLocation').valid && updateForm.get('pickupLocation').touched" class="alert-danger">Please enter the PickUp Location</span>-->
           </div>
@@ -71,7 +72,7 @@
         <div class="form-row mt-4">
 
           <label class="offset-md-2 col-md-2 col-form-label" for="destination">Drop Location</label>
-          <div class="col-md-7">
+          <div class="col-md-8">
             <input type="text" id="destination" formControlName="destination" placeholder="Enter the Drop Location" class="form-control">
             <!--<span *ngIf="!updateForm.get('destination').valid && updateForm.get('destination').touched" class="alert-danger">Please enter the Drop Location</span>-->
           </div>
@@ -80,16 +81,16 @@
       </ng-container>
     </div>
     <div class="form-row mt-4">
-      <div class="offset-md-10 col-md-2">
-        <a class="btn btn-info align-right text-light" (click)="addBookingButton()" id="addmore">
+      <div class="offset-md-10 col-md-2 text-right">
+        <a class="btn btn-info text-light text-right" (click)="addBookingButton()" id="addmore">
         Add More</a>
       </div>
     </div>
     <div class="form-row mt-4 mb-5">
-      <!-- Button -->
-      <div class="offset-md-10 col-md-2">
-        <button class="btn btn-success" type="submit" [disabled]="!updateForm.valid">Submit</button>
+      <div class="offset-md-10 col-md-2 text-right">
+        <button class="btn btn-info text-right" type="submit" [disabled]="!updateForm.valid">Submit</button>
       </div>
     </div>
   </fieldset>
 </form>
+</div>

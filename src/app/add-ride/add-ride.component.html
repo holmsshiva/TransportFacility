@@ -1,3 +1,4 @@
+<div class="container">
 <form class="form-horizontal col-12 mt-4" [formGroup]="addRideForm" (ngSubmit)="onFormSubmit(addRideForm.value)">
   <fieldset>
     <div class="form-row mt-4">
@@ -77,9 +78,10 @@
     </div>
     <div class="form-row mt-4">
       <!-- Button -->
-      <div class="offset-md-10 col-md-2">
-        <button class="btn btn-success" type="submit" [disabled]="!addRideForm.valid">Create</button>
+      <div class="offset-md-10 col-md-2 mr-4">
+        <button class="btn btn-info" type="submit" [disabled]="!addRideForm.valid">Create</button>
       </div>
     </div>
   </fieldset>
 </form>
+</div>
