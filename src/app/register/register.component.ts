@@ -45,7 +45,7 @@ export class RegisterComponent implements OnInit {
 		.subscribe(res => {
 		    let id = res['id'];
 
-		    this.router.navigate(['/list-ride', id]);
+		    this.router.navigate(['/login']);
 		  }, (err) => {
 		    console.log(err);
 
