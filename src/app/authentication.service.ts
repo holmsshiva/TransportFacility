@@ -8,7 +8,7 @@ import { User } from './user';
 const httpOptions = {
 	headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
-const apiUrl = 'http://localhost:3000/users';
+const apiUrl = 'https://my-json-server.typicode.com/holmsshiva/TransportFacility/users';
 
 @Injectable({
   providedIn: 'root'

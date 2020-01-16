@@ -6,7 +6,7 @@
       <label class="offset-md-2 col-md-2 col-form-label"  for="vType">Vehicle Type</label>
       <div class="col-md-7">
         <input type="text" id="vType" formControlName="vType" placeholder="Enter the Vichicle Type" class="form-control" list="vehicleList">
-        <!-- <span *ngIf="!addRideForm.get('vType').valid && addRideForm.get('vType').touched" class="alert-danger">Please enter the Vehicle Type</span>-->
+        <span *ngIf="addRideForm.get('vType').touched" class="alert-danger">Please enter the Vehicle Type</span>
         <datalist id="vehicleList">
 		    <option value="Car">
 		    <option value="Bike">
@@ -19,7 +19,7 @@
       <label class="offset-md-2 col-md-2 col-form-label"  for="vNumber">Vehicle Number</label>
       <div class="col-md-7">
         <input type="text" id="vNumber" formControlName="vNumber" placeholder="Enter the Vichicle Number" class="form-control text-uppercase">
-        <!-- <span *ngIf="!addRideForm.get('vNumber').valid && addRideForm.get('vNumber').touched" class="alert-danger">Please enter the Vehicle Number</span>-->
+        <span *ngIf="addRideForm.get('vNumber').touched" class="alert-danger">Please enter the Vehicle Number</span>
       </div>
     </div>
  
@@ -28,7 +28,7 @@
       <label class="offset-md-2 col-md-2 col-form-label" for="totalSeat">Total Seat</label>
       <div class="col-md-7">
         <input type="number" id="totalSeat" formControlName="totalSeat" placeholder="Enter the total number of seat" class="form-control" list="vehicleSeats">
-        <!-- <span *ngIf="!addRideForm.get('totalSeat').valid && addRideForm.get('totalSeat').touched" class="alert-danger">Please enter the Total Seat</span>-->
+        <span *ngIf="addRideForm.get('totalSeat').touched" class="alert-danger">Please enter the Total Seat</span>
         <datalist id="vehicleSeats">
   		    <option value="1">
   		    <option value="2">
@@ -44,7 +44,7 @@
       <label class="offset-md-2 col-md-2 col-form-label" for="availableSeat">Available Seat</label>
       <div class="col-md-7">
         <input type="number" id="availableSeat" formControlName="availableSeat" placeholder="Enter the total number of seat" class="form-control">
-        <!-- <span *ngIf="!addRideForm.get('availableSeat').valid && addRideForm.get('availableSeat').touched" class="alert-danger">Available Seat</span>-->
+        <span *ngIf="addRideForm.get('availableSeat').touched" class="alert-danger">Available Seat</span>
       </div>
     </div>
     <div formArrayName="bookings">
